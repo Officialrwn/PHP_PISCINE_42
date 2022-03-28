@@ -1,10 +1,14 @@
 <?php
-	$array = file("page.html");
 	$pattern0 = "/<a.*title=\"(.*?)\"/";
-	$pattern1 = "/<a .*>(\s.*?\s)</";
-	print_r($array);
-	if (preg_match($pattern1, $array[1], $m))
-		print_r(array_slice($m, 1));
-	echo strtoupper($m[1]);
-//	print_r($array);
+	$pattern1 = "/<a .*?>(.*?)</";
+	$str = implode("", file("page.html"));
+	preg_match_all($pattern0, $str, $m0);
+ 	preg_match_all($pattern1, $str, $m1);
+	$m0 = array_slice($m0, 1);
+	$m1 = array_slice($m1, 1);
+	foreach ($m1[0] as $string)
+		$str = str_replace($string, strtoupper($string), $str);
+	foreach ($m0[0] as $string)
+		$str = str_replace($string, strtoupper($string), $str);
+	echo $str;
 ?>
