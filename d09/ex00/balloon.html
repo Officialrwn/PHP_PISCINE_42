@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Balloon</title>
+	<style>
+		#balloon {
+			margin: 25% auto auto auto;
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	<div id="balloon" onmouseleave="decrease()" onclick="increase()"></div>
+	<script>
+		var balloon = document.getElementById("balloon");
+		var size = 200;
+		var color = new Array("red", "green", "blue");
+		var i = 0;
+
+		function set() {
+			if (size > 420 || size < 200)
+				size = 200;
+			balloon.style.width = size + "px";
+			balloon.style.height = size + "px";
+			balloon.style.backgroundColor = color[i];
+		}
+		function increase() {
+			size += 10;
+			if (++i == 3)
+				i = 0;
+			set();
+		}
+		function decrease() {
+			size -= 5;
+			if (--i == -1)
+				i = 2;
+			set();
+		}
+	</script>
+</body>
+</html>
