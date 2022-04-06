@@ -7,7 +7,7 @@
 	<title>Balloon</title>
 	<style>
 		#balloon {
-			margin: 25% auto auto auto;
+			margin: 20% auto auto auto;
 			width: 200px;
 			height: 200px;
 			background-color: red;
@@ -18,9 +18,9 @@
 <body>
 	<div id="balloon" onmouseleave="decrease()" onclick="increase()"></div>
 	<script>
-		var balloon = document.getElementById("balloon");
+		let balloon = document.getElementById("balloon");
+		let color = new Array("red", "green", "blue");
 		var size = 200;
-		var color = new Array("red", "green", "blue");
 		var i = 0;
 
 		function set() {
