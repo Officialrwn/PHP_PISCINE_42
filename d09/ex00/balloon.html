@@ -19,7 +19,7 @@
 	<div id="balloon" onmouseleave="decrease()" onclick="increase()"></div>
 	<script>
 		let balloon = document.getElementById("balloon");
-		let color = new Array("red", "green", "blue");
+		let colorArray = Array("red", "green", "blue");
 		var size = 200;
 		var i = 0;
 
@@ -28,18 +28,18 @@
 				size = 200;
 			balloon.style.width = size + "px";
 			balloon.style.height = size + "px";
-			balloon.style.backgroundColor = color[i];
+			balloon.style.backgroundColor = colorArray[i];
 		}
 		function increase() {
 			size += 10;
-			if (++i == 3)
+			if (++i > colorArray.length - 1)
 				i = 0;
 			set();
 		}
 		function decrease() {
 			size -= 5;
-			if (--i == -1)
-				i = 2;
+			if (--i < 0)
+				i = colorArray.length - 1;
 			set();
 		}
 	</script>
