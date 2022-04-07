@@ -1,6 +1,6 @@
 <?php
-	$pattern0 = "/<a .*?>(.*?)</";
-	$pattern1 = "/<a.*title=\"(.*?)\"/";
+	$pattern0 = "/<a .*?>(.*?)</i";
+	$pattern1 = "/<a.*title=\"(.*?)\"/i";
 	$str = implode("", file($argv[1]));
 	preg_match_all($pattern0, $str, $m0);
  	preg_match_all($pattern1, $str, $m1);
