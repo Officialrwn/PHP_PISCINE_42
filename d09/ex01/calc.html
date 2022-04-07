@@ -27,18 +27,42 @@
 </head>
 <body>
 	<div>
-		<input class="num" type="number" id="firstnum" value="">
-			<select name="sign" id="sign">
+		<input class="num" type="text" id="leftnum">
+			<select id="sign">
 				<option value="+">+</option>
 				<option value="-">-</option>
 				<option value="*">*</option>
 				<option value="/">/</option>
 				<option value="%">%</option>
 			  </select>
-		<input class="num" type="number" id="secondnum" value="">
+		<input class="num" type="text" id="rightnum" value="">
+		<button onclick="calculate()">Try me!</button>
 	</div>
 	<script>
+ 		setInterval("alert('Please, use me...')", 30000);
+		function calculate() {
+			var left = parseInt(document.getElementById("leftnum").value, 10);
+			var right = parseInt(document.getElementById("rightnum").value, 10);
+			var sign = document.getElementById("sign").value;
+			var result;
 
+			if (left < 0 || right < 0)
+				return (alert("Error :("));
+			else if (right == 0 && (sign == '/' || sign == '%'))
+				result = "It's over 9000!";
+			else if (sign == "+")
+				result = left + right;
+			else if (sign == '-')
+				result = left - right;
+			else if (sign == '*')
+				result = left * right;
+			else if (sign == '/')
+				result = left / right;
+			else if (sign == '%')
+				result = left % right;
+			console.log(result);
+			alert(result);
+		}
 	</script>
 </body>
 </html>
