@@ -1,0 +1,142 @@
+body {
+    background-color: rgb(71, 71, 71);
+}
+
+.borders {
+	position: relative;
+	justify-content: center;
+	display: inline-flex;
+	align-items: center;
+	margin: 2.5vh auto 0 auto;
+    background-color: rgb(144, 144, 144);
+    border-radius: 7px;
+    box-shadow: 7px 7px 7px black;
+	width: 7.3vw;
+    height: 47.7vh;
+}
+
+#header {
+	display: block;
+	width: 75vw;
+    height: 16vh;
+}
+
+#leftbar {
+	position: absolute;
+	margin-left: 13vw;
+}
+
+#center {
+	position: absolute;
+	margin-left: 21.8vw;
+	width: 55vw;
+    height: 62vh;
+}
+
+#rightbar {
+	margin-left: 78.1vw;
+}
+
+#day42 {
+	position: absolute;
+	top: 1.5vh;
+	left: 0.6vw;
+	width: 22vw; 
+	height: 12vh;
+}
+
+#loupe {
+	position: absolute;
+	bottom: -2.3vh;
+	right: 1.7vw;
+	width: 13vw;
+	height: 17vh;
+}
+
+#reload {
+	position: absolute;
+	top: 1.3vh;
+	right: 0.6vw;
+	width: 1.3vw;
+	height: 2.3vh;
+}
+
+#close {
+	position: absolute;
+	bottom: 1.3vh;
+	right: 0.6vw;
+	width: 1.2vw;
+	height: 2.2vh;
+}
+
+#arrow {
+	position: absolute;
+	top: 1.5vh;
+	width: 3.5vw;
+	height: 8.3vh;
+}
+
+#main {
+	position: absolute;
+	top: 10.7vh;
+	width: 4vw;
+	height: 7.8vh;
+}
+
+#eye {
+	position: absolute;
+	top: 19.5vh;
+	width: 4vw;
+	height: 7.8vh;
+}
+
+#tools {
+	position: absolute;
+	top: 28vh;
+	width: 4vw;
+	height: 7.8vh;
+}
+
+#chat {
+	position: absolute;
+	top: 37vh;
+	width: 4vw;
+	height: 7.8vh;
+}
+
+#cluster {
+	position: absolute;
+	left: 0.5vw;
+	width: 54vw;
+}
+
+#book {
+	position: absolute;
+	top: 1.5vh;
+	width: 4vw;
+	height: 10vh;
+}
+
+#towel {
+	position: absolute;
+	top: 12vh;
+	width: 3.7vw;
+	height: 5.3vh;
+}
+
+#brick {
+	position: absolute;
+	top: 18vh;
+	width: 2vw;
+	height: 3vh;
+}
+
+#entrez {
+    background-color: rgb(129, 255, 142);
+    border-radius: 20px;
+    width: 550px;
+    height: 180px;
+    border-radius: 12px;
+    box-shadow: 13px 13px 11px black;
+    
+}
