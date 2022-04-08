@@ -28,7 +28,9 @@ body {
 
 #center {
 	position: absolute;
-	margin-left: 21.8vw;
+	left: 21.8vw;
+	max-width: 90%;
+	max-height: 90%;
 	width: 55vw;
     height: 62vh;
 }
@@ -106,8 +108,10 @@ body {
 
 #cluster {
 	position: absolute;
-	left: 0.5vw;
-	width: 54vw;
+	max-width: 98%;
+	max-height: 97%;
+	width: 55vw;
+	height: 65vh;
 }
 
 #book {
@@ -125,18 +129,56 @@ body {
 }
 
 #brick {
+	background-image: url("resources/brick.jpeg");
+	background-size: 1.7vw;
 	position: absolute;
 	top: 18vh;
-	width: 2vw;
-	height: 3vh;
+	max-width: 87%;
+	min-height: 15%;
+	width: 8vw;
+	height: 7vh;
+}
+
+.text {
+	position: absolute;
+	top: -1vh;
+	left: 0.5vw;
+	font-family: sans-serif;
+	font-size: 0.9vw;
+}
+#bold {
+	font-family: Georgia;
+	font-size: 3.5vh;
+	font-weight: 100;
+}
+
+#ordinateurs {
+	text-shadow: 0.3vw 0.4vh 2px #FF0000e2;
+}
+
+#box {
+	position: absolute;
+	left: 0.3vw;
+	margin-top: 0.3vh;
+	width: 17.9vw;
+	height: 1.5vh;
+	border: inset;
+	border-radius: 1%;
+}
+
+#respondbutton {
+	border: solid rgb(190, 190, 190);
+	position: absolute;
+	margin-top: 0.2vh;
+	left: 19.3vw;
+	border-width: 0.1vw;
+	font-size: 0.7vw;
 }
 
 #entrez {
+	top: 4.5vh;
+	left: 10vw;
     background-color: rgb(129, 255, 142);
-    border-radius: 20px;
-    width: 550px;
-    height: 180px;
-    border-radius: 12px;
-    box-shadow: 13px 13px 11px black;
-    
+    width: 26vw;
+    height: 17.9vh;
 }
