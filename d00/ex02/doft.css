@@ -87,6 +87,8 @@ body {
 
 #eye {
 	position: absolute;
+	border: 0.34vw solid red;
+	border-radius: 5%;
 	top: 19.5vh;
 	width: 4vw;
 	height: 7.8vh;
@@ -129,7 +131,7 @@ body {
 }
 
 #brick {
-	background-image: url("resources/brick.jpeg");
+	background-image: url("resources/brick.jpg");
 	background-size: 1.7vw;
 	position: absolute;
 	top: 18vh;
