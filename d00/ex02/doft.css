@@ -12,7 +12,7 @@ body {
     border-radius: 7px;
     box-shadow: 7px 7px 7px black;
 	width: 7.3vw;
-    height: 47.7vh;
+    height: 48vh;
 }
 
 #header {
@@ -28,11 +28,16 @@ body {
 
 #center {
 	position: absolute;
-	left: 21.8vw;
-	max-width: 90%;
-	max-height: 90%;
-	width: 55vw;
-    height: 62vh;
+	left: 22vw;
+	width: 55.5vw;
+	height: 65vh;
+}
+
+#cluster {
+	position: absolute;
+	max-width: 98%;
+	max-height: 95%;
+
 }
 
 #rightbar {
@@ -96,25 +101,19 @@ body {
 
 #tools {
 	position: absolute;
-	top: 28vh;
+	top: 29vh;
 	width: 4vw;
 	height: 7.8vh;
 }
 
 #chat {
 	position: absolute;
-	top: 37vh;
+	top: 37.5vh;
 	width: 4vw;
 	height: 7.8vh;
 }
 
-#cluster {
-	position: absolute;
-	max-width: 98%;
-	max-height: 97%;
-	width: 55vw;
-	height: 65vh;
-}
+
 
 #book {
 	position: absolute;
