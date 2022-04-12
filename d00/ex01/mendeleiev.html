@@ -6,16 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>The Periodic Table of the Elements</title>
 	<style>
-		h1, h2 , body 	{
+		body {
 			text-align: center;
 			font-family: Arial;
+			background-image: url(https://imgs.search.brave.com/ZCnnOzpQSfoU0lhi30J0mV_3oCWWqnmb-67olFLkqoo/rs:fit:1200:1080:1/g:ce/aHR0cDovL3BhdmJj/YS5jb20vd2FsbGRi/L29yaWdpbmFsL2Yv/YS80LzYyMjYwOC5q/cGc);
+		}
+		h1 {
+			color: white;
 		}
 		table {
 			margin-left: auto;
 			margin-right: auto;
 		}
 		tr , td {
+			position: relative;
 			text-align: center;
+			padding-top: 17px;
+			padding-bottom: 20px;
 			border: 1px solid black;
 			border-collapse: collapse;
 			font-weight: bold;
@@ -23,183 +30,242 @@
 			width: 65px;
 		}
 		.atomweight {
-			padding-bottom: 5px;
-			padding-right: 2px;
-			text-align: right;
-			font-size: 11px;
+			position: absolute;
+			right: 2.5px;
+			bottom: 0px;
+			font-weight: normal;
+			font-size: 10px;
 		}
 		.elemnum {
-			text-align: left;
-			padding-top: 5px;
-			padding-left: 2px;
-			font-size: 11px;
+			position: absolute;
+			left: 2px;
+			bottom: 0px;
+			font-weight: normal;
+			font-size: 10px;
 		}
 		.empty {
 			border: 0px;
 		}
+		#lanthanoidsnum {
+			position: absolute;
+			top: 22px;
+			left: 15px;
+			font-size: 13px;
+			font-weight: normal;
+			vertical-align: top;
+		}
+		#actinoidsnum {
+			position: absolute;
+			top: 84px;
+			left: 10px;
+			font-size: 13px;
+			font-weight: normal;
+			vertical-align: top;
+		}
+		#lanid {
+			position: absolute;
+			bottom: 85px;
+			right: 7px;
+			font-size: 22px;
+			font-weight: normal;
+			vertical-align: top;
+		}
+		#actid {
+			position: absolute;
+			bottom: 20px;
+			right: 7px;
+			font-size: 22px;
+			font-weight: normal;
+			vertical-align: top;
+		}
 		.alkali {
 			background-color: #feae96;
-			background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
+		}
+		.alkaline-earth {
+			background-color: lightgoldenrodyellow;
+		}
+		.lanthanoids {
+			background-color: brown;
+		}
+		.actinoids {
+			background-color: pink;
+		}
+		.transition {
+			background-color: #feae96;
+		}
+		.post-transition {
+			background-color: lightblue;
+		}
+		.metaloids {
+			background-color: turquoise;
+		}
+		.reactive-nonmetals {
+			background-color: lightgreen;
+		}
+		.noble-gases {
+			background-color: purple;
+		}
+		.unknown {
+			background-color:lightgray;
+		}
+		.info {
+			background-color: lightskyblue;
 		}
 	</style>
 </head>
 <body>
 	<h1>The Periodic Table of the Elements</h1>
 	<table contenteditable="true">
-		<tr><td class="empty" colspan="19"></td></tr>
 		<tr>
-			<td><div class="atomweight">1.008</div>H<div class="elemnum">1</div></td>
-			<td class="empty" colspan="17"></td>
-			<td><div class="atomweight">4.003</div>He<div class="elemnum">2</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">1.008</div>H<div class="elemnum">1</div></td>
+			<td class="empty" colspan="16"></td>
+			<td class="noble-gases"><div class="atomweight">4.003</div>He<div class="elemnum">2</div></td>
 		</tr>
 		<tr>
 			<td class="alkali"><div class="atomweight">6.941</div>Li<div class="elemnum">3</div></td>
-			<td><div class="atomweight">9.012</div>Be<div class="elemnum">4</div></td>
-			<td class="empty" colspan="11"></td>
-			<td><div class="atomweight">10.81</div>2<div class="elemnum">5</div></td>
-			<td><div class="atomweight">12.011</div>2<div class="elemnum">6</div></td>
-			<td><div class="atomweight">14.007</div>2<div class="elemnum">7</div></td>
-			<td><div class="atomweight">15.999</div>2<div class="elemnum">8</div></td>
-			<td><div class="atomweight">18.998</div>2<div class="elemnum">9</div></td>
-			<td><div class="atomweight">20.18</div>2<div class="elemnum">10</div></td>
+			<td class="alkaline-earth"><div class="atomweight">9.0122</div>Be<div class="elemnum">4</div></td>
+			<td class="empty" colspan="10"></td>
+			<td class="metaloids"><div class="atomweight">10.81</div>B<div class="elemnum">5</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">12.011</div>C<div class="elemnum">6</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">14.007</div>N<div class="elemnum">7</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">15.999</div>O<div class="elemnum">8</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">18.998</div>F<div class="elemnum">9</div></td>
+			<td class="noble-gases"><div class="atomweight">20.180</div>Ne<div class="elemnum">10</div></td>
 		</tr>
 		<tr>
-			<td><div class="atomweight">22.99</div>H<div class="elemnum">11</div></td>
-			<td><div class="atomweight">24.305</div>2<div class="elemnum">12</div></td>
-			<td class="empty" colspan="11"></td>
-			<td><div class="atomweight">26.982</div>2<div class="elemnum">13</div></td>
-			<td><div class="atomweight">28.085</div>2<div class="elemnum">14</div></td>
-			<td><div class="atomweight">30.974</div>2<div class="elemnum">15</div></td>
-			<td><div class="atomweight">32.06</div>2<div class="elemnum">16</div></td>
-			<td><div class="atomweight">35.45</div>2<div class="elemnum">17</div></td>
-			<td><div class="atomweight">39.948</div>2<div class="elemnum">18</div></td>
+			<td class="alkali"><div class="atomweight">22.99</div>Na<div class="elemnum">11</div></td>
+			<td class="alkaline-earth"><div class="atomweight">24.305</div>Mg<div class="elemnum">12</div></td>
+			<td class="empty" colspan="10">
+			</td>
+			<td class="post-transition"><div class="atomweight">26.982</div>Al<div class="elemnum">13</div></td>
+			<td class="metaloids"><div class="atomweight">28.085</div>Si<div class="elemnum">14</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">30.974</div>P<div class="elemnum">15</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">32.06</div>S<div class="elemnum">16</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">35.45</div>Cl<div class="elemnum">17</div></td>
+			<td class="noble-gases"><div class="atomweight">39.948</div>Ar<div class="elemnum">18</div></td>
 		</tr>
 		<tr>
-			<td><div class="atomweight">39.098</div>H<div class="elemnum">19</div></td>
-			<td><div class="atomweight">40.078</div>2<div class="elemnum">20</div></td>
-			<td class="empty"></td>
-			<td><div class="atomweight">44.956</div>2<div class="elemnum">21</div></td>
-			<td><div class="atomweight">47.867</div>2<div class="elemnum">22</div></td>
-			<td><div class="atomweight">50.942</div>2<div class="elemnum">23</div></td>
-			<td><div class="atomweight">51.996</div>2<div class="elemnum">24</div></td>
-			<td><div class="atomweight">54.938</div>2<div class="elemnum">25</div></td>
-			<td><div class="atomweight">55.845</div>2<div class="elemnum">26</div></td>
-			<td><div class="atomweight">58.933</div>2<div class="elemnum">27</div></td>
-			<td><div class="atomweight">58.693</div>2<div class="elemnum">28</div></td>
-			<td><div class="atomweight">63.546</div>2<div class="elemnum">29</div></td>
-			<td><div class="atomweight">65.38</div>2<div class="elemnum">30</div></td>
-			<td><div class="atomweight">69.723</div>2<div class="elemnum">31</div></td>
-			<td><div class="atomweight">72.630</div>2<div class="elemnum">32</div></td>
-			<td><div class="atomweight">74.922</div>2<div class="elemnum">33</div></td>
-			<td><div class="atomweight">78.971</div>2<div class="elemnum">34</div></td>
-			<td><div class="atomweight">79.904</div>2<div class="elemnum">35</div></td>
-			<td><div class="atomweight">83.798</div>2<div class="elemnum">36</div></td>
+			<td class="alkali"><div class="atomweight">39.098</div>K<div class="elemnum">19</div></td>
+			<td class="alkaline-earth"><div class="atomweight">40.078</div>Ca<div class="elemnum">20</div></td>
+			<td class="transition"><div class="atomweight">44.956</div>Sc<div class="elemnum">21</div></td>
+			<td class="transition"><div class="atomweight">47.867</div>Ti<div class="elemnum">22</div></td>
+			<td class="transition"><div class="atomweight">50.942</div>V<div class="elemnum">23</div></td>
+			<td class="transition"><div class="atomweight">51.996</div>Cr<div class="elemnum">24</div></td>
+			<td class="transition"><div class="atomweight">54.938</div>Mn<div class="elemnum">25</div></td>
+			<td class="transition"><div class="atomweight">55.845</div>Fe<div class="elemnum">26</div></td>
+			<td class="transition"><div class="atomweight">58.933</div>Co<div class="elemnum">27</div></td>
+			<td class="transition"><div class="atomweight">58.693</div>Ni<div class="elemnum">28</div></td>
+			<td class="transition"><div class="atomweight">63.546</div>Cu<div class="elemnum">29</div></td>
+			<td class="transition"><div class="atomweight">65.38</div>Zn<div class="elemnum">30</div></td>
+			<td class="post-transition"><div class="atomweight">69.723</div>Ga<div class="elemnum">31</div></td>
+			<td class="metaloids"><div class="atomweight">72.630</div>Ge<div class="elemnum">32</div></td>
+			<td class="metaloids"><div class="atomweight">74.922</div>As<div class="elemnum">33</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">78.971</div>Se<div class="elemnum">34</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">79.904</div>Br<div class="elemnum">35</div></td>
+			<td class="noble-gases"><div class="atomweight">83.798</div>Kr<div class="elemnum">36</div></td>
 		</tr>
 		<tr>
-			<td><div class="atomweight">1</div>H<div class="elemnum">37</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">38</div></td>
-			<td class="empty"></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">39</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">40</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">41</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">42</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">43</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">44</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">45</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">46</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">47</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">48</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">49</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">50</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">51</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">52</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">53</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">54</div></td>
+			<td class="alkali"><div class="atomweight">85.468</div>Rb<div class="elemnum">37</div></td>
+			<td class="alkaline-earth"><div class="atomweight">87.62</div>Sr<div class="elemnum">38</div></td>
+			<td class="transition"><div class="atomweight">88.906</div>Y<div class="elemnum">39</div></td>
+			<td class="transition"><div class="atomweight">91.224</div>Zr<div class="elemnum">40</div></td>
+			<td class="transition"><div class="atomweight">92.906</div>Nb<div class="elemnum">41</div></td>
+			<td class="transition"><div class="atomweight">95.95</div>Mo<div class="elemnum">42</div></td>
+			<td class="transition"><div class="atomweight">(98)</div>Tc<div class="elemnum">43</div></td>
+			<td class="transition"><div class="atomweight">101.07</div>Ru<div class="elemnum">44</div></td>
+			<td class="transition"><div class="atomweight">102.91</div>Rh<div class="elemnum">45</div></td>
+			<td class="transition"><div class="atomweight">106.42</div>Pd<div class="elemnum">46</div></td>
+			<td class="transition"><div class="atomweight">107.87</div>Ag<div class="elemnum">47</div></td>
+			<td class="transition"><div class="atomweight">112.41</div>Cd<div class="elemnum">48</div></td>
+			<td class="post-transition"><div class="atomweight">114.82</div>In<div class="elemnum">49</div></td>
+			<td class="post-transition"><div class="atomweight">118.71</div>Sn<div class="elemnum">50</div></td>
+			<td class="metaloids"><div class="atomweight">121.76</div>Sb<div class="elemnum">51</div></td>
+			<td class="metaloids"><div class="atomweight">127.60</div>Te<div class="elemnum">52</div></td>
+			<td class="reactive-nonmetals"><div class="atomweight">126.90</div>I<div class="elemnum">53</div></td>
+			<td class="noble-gases"><div class="atomweight">131.29</div>Xe<div class="elemnum">54</div></td>
 		</tr>
 		<tr>
-			<td><div class="atomweight">1</div>H<div class="elemnum">55</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">56</div></td>
-			<td>*</td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">71</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">72</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">73</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">74</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">75</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">76</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">77</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">78</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">79</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">80</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">81</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">82</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">83</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">84</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">85</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">86</div></td>
+			<td class="alkali"><div class="atomweight">132.91</div>Cs<div class="elemnum">55</div></td>
+			<td class="alkaline-earth"><div class="atomweight">137.33</div>Ba<div class="elemnum">56</div></td>
+			<td class="info" rowspan="5">
+				<span id="lanthanoidsnum">57-71</span>
+				<span id="actinoidsnum">89-103</span>
+				<span id="lanid">6</span>
+				<span id="actid">7</span>
+			</td>
+			<td class="transition"><div class="atomweight">178.49</div>Hf<div class="elemnum">72</div></td>
+			<td class="transition"><div class="atomweight">180.95</div>Ta<div class="elemnum">73</div></td>
+			<td class="transition"><div class="atomweight">183.84</div>W<div class="elemnum">74</div></td>
+			<td class="transition"><div class="atomweight">186.21</div>Re<div class="elemnum">75</div></td>
+			<td class="transition"><div class="atomweight">190.23</div>Os<div class="elemnum">76</div></td>
+			<td class="transition"><div class="atomweight">192.22</div>Ir<div class="elemnum">77</div></td>
+			<td class="transition"><div class="atomweight">195.08</div>Pt<div class="elemnum">78</div></td>
+			<td class="transition"><div class="atomweight">196.97</div>Au<div class="elemnum">79</div></td>
+			<td class="transition"><div class="atomweight">200.59</div>Hg<div class="elemnum">80</div></td>
+			<td class="post-transition"><div class="atomweight">204.38</div>Ti<div class="elemnum">81</div></td>
+			<td class="post-transition"><div class="atomweight">207.2</div>Pb<div class="elemnum">82</div></td>
+			<td class="post-transition"><div class="atomweight">208.98</div>Bi<div class="elemnum">83</div></td>
+			<td class="post-transition"><div class="atomweight">(209)</div>Po<div class="elemnum">84</div></td>
+			<td class="metaloids"><div class="atomweight">(210)</div>At<div class="elemnum">85</div></td>
+			<td class="noble-gases"><div class="atomweight">(222)</div>Rn<div class="elemnum">86</div></td>
 		</tr>
 		<tr>
-			<td><div class="atomweight">1</div>H<div class="elemnum">87</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">88</div></td>
-			<td>**</td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">103</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">104</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">105</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">106</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">107</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">108</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">109</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">110</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">111</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">112</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">113</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">114</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">115</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">116</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">117</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">118</div></td>
+			<td class="alkali"><div class="atomweight">(223)</div>Fr<div class="elemnum">87</div></td>
+			<td class="alkaline-earth"><div class="atomweight">(226)</div>Ra<div class="elemnum">88</div></td>
+			<td class="transition"><div class="atomweight">(267)</div>Rf<div class="elemnum">104</div></td>
+			<td class="transition"><div class="atomweight">(268)</div>Db<div class="elemnum">105</div></td>
+			<td class="transition"><div class="atomweight">(269)</div>Sg<div class="elemnum">106</div></td>
+			<td class="transition"><div class="atomweight">(270)</div>Bh<div class="elemnum">107</div></td>
+			<td class="transition"><div class="atomweight">(277)</div>Hs<div class="elemnum">108</div></td>
+			<td class="unknown"><div class="atomweight">(278)</div>Mt<div class="elemnum">109</div></td>
+			<td class="unknown"><div class="atomweight">(281)</div>Ds<div class="elemnum">110</div></td>
+			<td class="unknown"><div class="atomweight">(282)</div>Rg<div class="elemnum">111</div></td>
+			<td class="unknown"><div class="atomweight">(285)</div>Cn<div class="elemnum">112</div></td>
+			<td class="unknown"><div class="atomweight">(286)</div>Nh<div class="elemnum">113</div></td>
+			<td class="unknown"><div class="atomweight">(289)</div>Fl<div class="elemnum">114</div></td>
+			<td class="unknown"><div class="atomweight">(290)</div>Mc<div class="elemnum">115</div></td>
+			<td class="unknown"><div class="atomweight">(293)</div>Lv<div class="elemnum">116</div></td>
+			<td class="unknown"><div class="atomweight">(294)</div>Ts<div class="elemnum">117</div></td>
+			<td class="unknown"><div class="atomweight">(294)</div>Og<div class="elemnum">118</div></td>
 		</tr>
-		<tr><td class="empty"><br></td></tr>
-		<tr>
-			<td class="empty"></td>
-			<td class="empty"></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">57</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">58</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">59</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">60</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">61</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">62</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">63</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">64</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">65</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">66</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">67</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">68</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">69</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">70</div></td>
-			<td class="empty"></td>
-			<td class="empty"></td>
-			<td class="empty"></td>
-		</tr>
+		<tr><td class="empty"></td></tr>
 		<tr>
 			<td class="empty"></td>
 			<td class="empty"></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">89</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">90</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">91</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">92</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">93</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">94</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">95</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">96</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">97</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">98</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">99</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">100</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">101</div></td>
-			<td><div class="atomweight">1</div>2<div class="elemnum">102</div></td>
+			<td class="lanthanoids"><div class="atomweight">138.91</div>La<div class="elemnum">57</div></td>
+			<td class="lanthanoids"><div class="atomweight">140.12</div>Ce<div class="elemnum">58</div></td>
+			<td class="lanthanoids"><div class="atomweight">140.91</div>Pr<div class="elemnum">59</div></td>
+			<td class="lanthanoids"><div class="atomweight">144.24</div>Nd<div class="elemnum">60</div></td>
+			<td class="lanthanoids"><div class="atomweight">(145)</div>Pm<div class="elemnum">61</div></td>
+			<td class="lanthanoids"><div class="atomweight">150.36</div>Sm<div class="elemnum">62</div></td>
+			<td class="lanthanoids"><div class="atomweight">151.96</div>Eu<div class="elemnum">63</div></td>
+			<td class="lanthanoids"><div class="atomweight">157.25</div>Gd<div class="elemnum">64</div></td>
+			<td class="lanthanoids"><div class="atomweight">158.93</div>Tb<div class="elemnum">65</div></td>
+			<td class="lanthanoids"><div class="atomweight">162.50</div>Dy<div class="elemnum">66</div></td>
+			<td class="lanthanoids"><div class="atomweight">164.93</div>Ho<div class="elemnum">67</div></td>
+			<td class="lanthanoids"><div class="atomweight">167.26</div>Er<div class="elemnum">68</div></td>
+			<td class="lanthanoids"><div class="atomweight">168.93</div>Tm<div class="elemnum">69</div></td>
+			<td class="lanthanoids"><div class="atomweight">173.05</div>Yb<div class="elemnum">70</div></td>
+			<td class="lanthanoids"><div class="atomweight">174.97</div>Lu<div class="elemnum">71</div></td>
+		</tr>
+		<tr>
 			<td class="empty"></td>
 			<td class="empty"></td>
-			<td class="empty"></td>
+			<td class="actinoids"><div class="atomweight">(227)</div>Ac<div class="elemnum">89</div></td>
+			<td class="actinoids"><div class="atomweight">232.04</div>Th<div class="elemnum">90</div></td>
+			<td class="actinoids"><div class="atomweight">231.04</div>Pa<div class="elemnum">91</div></td>
+			<td class="actinoids"><div class="atomweight">238.03</div>U<div class="elemnum">92</div></td>
+			<td class="actinoids"><div class="atomweight">(237)</div>Np<div class="elemnum">93</div></td>
+			<td class="actinoids"><div class="atomweight">(244)</div>Pu<div class="elemnum">94</div></td>
+			<td class="actinoids"><div class="atomweight">(243)</div>Am<div class="elemnum">95</div></td>
+			<td class="actinoids"><div class="atomweight">(247)</div>Cm<div class="elemnum">96</div></td>
+			<td class="actinoids"><div class="atomweight">(247)</div>Bk<div class="elemnum">97</div></td>
+			<td class="actinoids"><div class="atomweight">(251)</div>Cf<div class="elemnum">98</div></td>
+			<td class="actinoids"><div class="atomweight">(252)</div>Es<div class="elemnum">99</div></td>
+			<td class="actinoids"><div class="atomweight">(257)</div>Fm<div class="elemnum">100</div></td>
+			<td class="actinoids"><div class="atomweight">(258)</div>Md<div class="elemnum">101</div></td>
+			<td class="actinoids"><div class="atomweight">(259)</div>No<div class="elemnum">102</div></td>
+			<td class="actinoids"><div class="atomweight">(266)</div>Lr<div class="elemnum">103</div></td>
 		</tr>
 	</table>
 </body>
