@@ -1,6 +1,6 @@
 function add() {
 	let input = prompt("Add a todo");
-	if (input != '')
+	if (input != '' && input != null)
 	{
 		const newDiv = document.createElement("div");
 		const newContent = document.createTextNode(input);
