@@ -6,8 +6,16 @@ function add() {
 		const newContent = document.createTextNode(input);
 		newDiv.appendChild(newContent);
 		newDiv.className = "todo";
+		newDiv.onclick = function() {remove(); };
 		const list = document.getElementById("ft_list");
 		list.prepend(newDiv);
+	}
+}
+
+function remove() {
+	if(confirm("Are you sure you want to remove the todo task?"))
+	{
+		
 	}
 }
 
