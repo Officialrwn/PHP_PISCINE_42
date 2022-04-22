@@ -3,9 +3,7 @@
 function ft_is_sort($tab) {
 	$temp = $tab;
 	sort($temp);
-	$temp = implode(" ", $temp);
-	$tab = implode(" ", $tab);
-	if (strcmp($temp, $tab) == 0)
+	if ($temp == $tab)
 		return true;
 	return false;
 }

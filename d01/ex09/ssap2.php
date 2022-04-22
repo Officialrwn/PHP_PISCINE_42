@@ -1,17 +1,22 @@
 #!/usr/bin/php
 <?php
-	function cmp($a, $b) {
-		if ($a == $b)
-			return (0);
-	}
 	$array = array_slice($argv, 1);
-	sort($array, 2);
-	var_dump($array);
-	
-/* 	$result = array();
+	$temp = array();
 	foreach ($array as $str)
-		$result = array_merge($result, preg_split('/\s+/', trim($str)));
-	sort($result);
-	foreach ($result as $word)
-		echo $word . PHP_EOL; */
+		$temp = array_merge($temp, preg_split('/\s+/', trim($str)));
+	$alpha = $num = $char = array();
+	foreach($temp as $word)
+	{
+		if (ctype_alpha($word))
+			$alpha[] = $word;
+		else if (ctype_digit($word))
+			$num[] = $word;
+		else
+			$char[] = $word;
+	}
+	natcasesort($alpha);
+	sort($num, 2);
+	sort($char);
+	$result = array_merge($alpha, $num, $char);
+	var_dump($result);
 ?>

@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 
 $arr = preg_split('/\s+/', trim($argv[1]));
