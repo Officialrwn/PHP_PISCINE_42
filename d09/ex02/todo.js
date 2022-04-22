@@ -1,31 +1,72 @@
-function add() {
+console.log(document.cookie.split(';'));
+var cookies = document.cookie.split(';');
+var ret = '';
+var id = 0;
+let retval;
+for(var i = 1; i <= cookies.length; i++) 
+{
+	ret = cookies[i - 1];
+	retval = ret.split('=');
+	if (retval[0] != '')
+		add(retval[1], retval[0]);
+}
+
+function newitem() {
 	let input = prompt("Add a todo");
 	if (input != '' && input != null)
 	{
-		const newDiv = document.createElement("div");
-		const newContent = document.createTextNode(input);
-		newDiv.appendChild(newContent);
-		newDiv.className = "todo";
-		newDiv.onclick = function() {remove(); };
-		const list = document.getElementById("ft_list");
-		list.prepend(newDiv);
+		setCookie(id.toString(10), input, 7);
+		add(input, id);
+		id++;
+		alert(id);
 	}
 }
 
-function remove() {
+function deleteCookie(name) {
+	var name = name + "=";
+	let ca = document.cookie.split(';');
+	for(let i = 0; i <ca.length; i++) 
+	{
+		let c = ca[i];
+		while (c.charAt(0) == ' ') 
+		{
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) 
+		{
+			document.cookie = name + ';expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
+			return ;
+		}	
+	}
+}
+
+function setCookie(name, value, days) {
+    var expires = "";
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+	
+}
+
+function add(input, id) {
+	const newDiv = document.createElement("div");
+	const newContent = document.createTextNode(input);
+	newDiv.appendChild(newContent);
+	newDiv.className = "todo";
+	newDiv.id = id;
+	newDiv.onclick = function() { remove(this); };
+	const list = document.getElementById("ft_list");
+	list.prepend(newDiv);
+}
+
+function remove(element) {
 	if(confirm("Are you sure you want to remove the todo task?"))
 	{
-		
-	}
+		alert(element.id);
+		deleteCookie(element.id.toString(10));
+		element.remove();
+	}	
 }
-
-/* 
-	Each Todo must be nside the FT_List div. A todo is addedd to the top .
-	New button prompts a text window to give the todo input and if its not empty and validated it will
-	be added to the top of hte list. 
-
-	Clicking on the todo task will pprompt the user yes or no if they want to delete the task. If yes delete the 
-	element (not hiddden). 
-
-	Save todo list as a cookie and load it. iif the cookie doesnt exist the list will be empty.
- */

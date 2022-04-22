@@ -8,8 +8,8 @@
 	<title>Document</title>
 	<style>
 		div {
-
 			font-family: Arial;
+			font-size: 1vw;
 			text-align: center;
 			margin: auto;
 		}
@@ -30,8 +30,12 @@
 			box-shadow: 5px 5px 5px gray;
 			background-color: lightblue;
 			border-radius: 20px;
-			max-width: 35%;
+			max-width: 30%;
 			white-space: pre-line;
+			
+		}
+		.todo:hover {
+			background-color: skyblue;
 		}
 		#title {
 			width: 40%;
@@ -53,10 +57,8 @@
 	<div class="list" id="title">
 		<h1>TO DO</h1>
 	</div>
-	<button id="new" onclick="add()">New</button><br />
+	<button id="new" onclick="newitem()">New</button><br />
 	<div id="ft_list">
-		<div class="todo" onclick="remove()">Hello dasdasdasdasdasdasdasdasdasdasdasd sadasddsadasdsadasdadsdasdasdasdasdadas</div>
-		<div class="todo">Hello</div>
 	</div>
 	<script src="todo.js"></script>
 </body>
