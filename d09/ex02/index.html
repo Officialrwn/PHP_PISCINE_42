@@ -8,30 +8,56 @@
 	<title>Document</title>
 	<style>
 		div {
-			display: flex;
-			justify-content: center;
+
 			font-family: Arial;
+			text-align: center;
+			margin: auto;
 		}
 		.list {
-			width: 35%;
-			text-align: center;
+			position: relative;
+			display: flex;
+			justify-content: center;
 			margin: auto auto 10px auto;
 			background-color: gray;
-			border-radius: 20px;
+
+		}		
+		.todo {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			margin: auto auto 10px auto;
+			padding: 5px;
 			box-shadow: 5px 5px 5px gray;
+			background-color: lightblue;
+			border-radius: 20px;
+			max-width: 35%;
+			white-space: pre-line;
 		}
 		#title {
 			width: 40%;
-			margin: auto;
 			background-color: blueviolet;
 			border: 1px solid black;
+			border-radius: 20px;
+			box-shadow: 5px 5px 5px gray;
 		}
+		#new {
+			display: flex;
+			justify-content: center;
+			margin: 15px auto -5px auto;
+		}
+
+
 	</style>
 </head>
 <body>
-	<div class="list" id="title"><h1>TO DO</h1></div><br/>
-	<div><button onclick="add()">New</button></div><br />
-	<div id="ft_list"></div>
+	<div class="list" id="title">
+		<h1>TO DO</h1>
+	</div>
+	<button id="new" onclick="add()">New</button><br />
+	<div id="ft_list">
+		<div class="todo">Hello dasdasdasdasdasdasdasdasdasdasdasd sadasddsadasdsadasdadsdasdasdasdasdadas</div>
+		<div class="todo">Hello</div>
+	</div>
 	<script src="todo.js"></script>
 </body>
 </html>
