@@ -162,11 +162,12 @@ body {
 	top: -1vh;
 	left: 0.5vw;
 	font-family: sans-serif;
-	font-size: 0.9vw;
+	font-size: 0.8vw;
+	letter-spacing: 0.05vw;
 }
 #bold {
 	font-family: Georgia;
-	font-size: 3.5vh;
+	font-size: 2.6vh;
 	font-weight: 100;
 }
 
@@ -178,7 +179,7 @@ body {
 	position: absolute;
 	left: 0.3vw;
 	margin-top: 0.3vh;
-	width: 17.9vw;
+	width: 18.9vw;
 	height: 1.5vh;
 	border: inset;
 	border-radius: 1%;
@@ -188,15 +189,15 @@ body {
 	border: solid rgb(190, 190, 190);
 	position: absolute;
 	margin-top: 0.2vh;
-	left: 19.3vw;
+	left: 20.3vw;
 	border-width: 0.1vw;
 	font-size: 0.7vw;
 }
 
 #entrez {
-	top: 4.5vh;
-	left: 10vw;
+	top: 4.8vh;
+	left: 9vw;
     background-color: rgb(129, 255, 142);
-    width: 26vw;
-    height: 17.9vh;
+    width: 27vw;
+    height: 13.9vh;
 }

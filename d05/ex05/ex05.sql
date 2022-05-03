@@ -1,0 +1,1 @@
+DELETE from db_leotran.ft_table WHERE id < 6;

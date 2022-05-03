@@ -1,0 +1,115 @@
+body {
+	text-align: center;
+	font-family: Arial;
+	background-image: url(https://imgs.search.brave.com/ZCnnOzpQSfoU0lhi30J0mV_3oCWWqnmb-67olFLkqoo/rs:fit:1200:1080:1/g:ce/aHR0cDovL3BhdmJj/YS5jb20vd2FsbGRi/L29yaWdpbmFsL2Yv/YS80LzYyMjYwOC5q/cGc);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+img {
+	max-width: 20%;
+	height: auto;
+	width: auto;
+}
+h1 {
+	color: white;
+	font-size: 2vw;
+}
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+tr , td {
+	position: relative;
+	text-align: center;
+
+	border: 0.1vw solid black;
+	border-collapse: collapse;
+	font-weight: bold;
+	font-size: 2vw;
+	width: 5vw;
+	height: 8.3vh;
+}
+.atomweight {
+	position: absolute;
+	right: 0.2vw;
+	bottom: 0vw;
+	font-weight: normal;
+	font-size: 0.8vw;
+}
+.elemnum {
+	position: absolute;
+	left: 0.2vw;
+	bottom: 0vw;
+	font-weight: normal;
+	font-size: 0.8vw;
+}
+.empty {
+	border: 0vw;
+}
+#lanthanoidsnum {
+	position: absolute;
+	top: 3.4vh;
+	left: 1.2vw;
+	font-size: 1vw;
+	font-weight: normal;
+	vertical-align: top;
+}
+#actinoidsnum {
+	position: absolute;
+	top: 12.4vh;
+	left: 1.2vw;
+	font-size: 1vw;
+	font-weight: normal;
+	vertical-align: top;
+}
+#lanid {
+	position: absolute;
+	bottom: 11.8vh;
+	right: 0.7vw;
+	font-size: 1.9vw;
+	font-weight: normal;
+	vertical-align: top;
+}
+#actid {
+	position: absolute;
+	bottom: 2.2vh;
+	right: 0.7vw;
+	font-size: 1.9vw;
+	font-weight: normal;
+	vertical-align: top;
+}
+.alkali {
+	background-color: #feae96;
+}
+.alkaline-earth {
+	background-color: lightgoldenrodyellow;
+}
+.lanthanoids {
+	background-color: brown;
+}
+.actinoids {
+	background-color: pink;
+}
+.transition {
+	background-color: #feae96;
+}
+.post-transition {
+	background-color: lightblue;
+}
+.metaloids {
+	background-color: turquoise;
+}
+.reactive-nonmetals {
+	background-color: lightgreen;
+}
+.noble-gases {
+	background-color: purple;
+}
+.unknown {
+	background-color:lightgray;
+}
+.info {
+	background-color: lightskyblue;
+}

@@ -1,10 +1,9 @@
 #!/usr/bin/php
 <?php
 	$array = array_slice($argv, 1);
-	$temp = array();
+	$temp = $alpha = $num = $char = array();
 	foreach ($array as $str)
 		$temp = array_merge($temp, preg_split('/\s+/', trim($str)));
-	$alpha = $num = $char = array();
 	foreach($temp as $word)
 	{
 		if (ctype_alpha($word))
@@ -18,5 +17,6 @@
 	sort($num, 2);
 	sort($char);
 	$result = array_merge($alpha, $num, $char);
-	var_dump($result);
+	foreach($result as $str)
+		echo $str . PHP_EOL;
 ?>

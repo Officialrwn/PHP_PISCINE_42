@@ -1,42 +1,25 @@
-console.log(document.cookie.split(';'));
 var cookies = document.cookie.split(';');
-var ret = '';
-var id = 0;
-let retval;
-for(var i = 1; i <= cookies.length; i++) 
+for (i = 0; i < cookies.length; i++) 
 {
-	ret = cookies[i - 1];
-	retval = ret.split('=');
+	let ret = cookies[i];
+	if (ret == '')
+		break ;
+	let retval = ret.split('=');
 	if (retval[0] != '')
-		add(retval[1], retval[0]);
+	{
+		let decoded = decodeURIComponent(retval[1]);
+		add(retval[0], decoded);
+	}
 }
 
 function newitem() {
 	let input = prompt("Add a todo");
-	if (input != '' && input != null)
+	let encoded = encodeURIComponent(input);
+	let ran_num = Math.floor(Math.random() * 4096) + 1;
+	if (input != '' && input != null && input.search(/^[\s]*$/) < 0)
 	{
-		setCookie(id.toString(10), input, 7);
-		add(input, id);
-		id++;
-		alert(id);
-	}
-}
-
-function deleteCookie(name) {
-	var name = name + "=";
-	let ca = document.cookie.split(';');
-	for(let i = 0; i <ca.length; i++) 
-	{
-		let c = ca[i];
-		while (c.charAt(0) == ' ') 
-		{
-			c = c.substring(1);
-		}
-		if (c.indexOf(name) == 0) 
-		{
-			document.cookie = name + ';expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
-			return ;
-		}	
+		setCookie(" #" + ran_num, encoded, 7);
+		add(" #" + ran_num, input);
 	}
 }
 
@@ -48,15 +31,14 @@ function setCookie(name, value, days) {
         expires = "; expires=" + date.toUTCString();
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-	
 }
 
-function add(input, id) {
+function add(idnum, input) {
 	const newDiv = document.createElement("div");
 	const newContent = document.createTextNode(input);
 	newDiv.appendChild(newContent);
 	newDiv.className = "todo";
-	newDiv.id = id;
+	newDiv.id = idnum;
 	newDiv.onclick = function() { remove(this); };
 	const list = document.getElementById("ft_list");
 	list.prepend(newDiv);
@@ -65,8 +47,7 @@ function add(input, id) {
 function remove(element) {
 	if(confirm("Are you sure you want to remove the todo task?"))
 	{
-		alert(element.id);
-		deleteCookie(element.id.toString(10));
+		document.cookie = element.id + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
 		element.remove();
 	}	
 }

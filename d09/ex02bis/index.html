@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" integrity="sha512-aUhL2xOCrpLEuGD5f6tgHbLYEXRpYZ8G5yD+WlFrXrPy2IrWBlu6bih5C9H6qGsgqnU6mgx6KtU8TreHpASprw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<style>
+		body {
+			background-image: url("https://imgs.search.brave.com/6CKA_aEHyUz9ZdcQkxw8ksPBs1dmc5Tm3s1NnGgMEBg/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/bWF0dG5vcm1hbi5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MTUvMDkvdG9kby1s/aXN0LmpwZw");
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		div {
+			font-family: Arial;
+			font-size: 1vw;
+			text-align: center;
+			margin: auto;
+		}
+		.list {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			margin: 40px auto 10px auto;
+			background-color: gray;
+
+		}		
+		.todo {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			margin: auto auto 10px auto;
+			padding: 5px;
+			box-shadow: 5px 5px 5px gray;
+			background-color: lightblue;
+			border-radius: 20px;
+			max-width: 30%;
+			white-space: pre-line;
+			
+		}
+		.todo:hover {
+			background-color: skyblue;
+		}
+		#title {
+			width: 40%;
+			background-color: blueviolet;
+			border: 1px solid black;
+			border-radius: 20px;
+			box-shadow: 5px 5px 5px gray;
+		}
+		#new {
+			display: flex;
+			justify-content: center;
+			margin: 15px auto -5px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="list" id="title">
+		<h1>TO DO</h1>
+	</div>
+	<button id="new">New</button><br />
+	<div id="ft_list">
+	</div>
+	<script src="todo.js"></script>
+</body>
+</html>

@@ -41,25 +41,29 @@
 	<script>
  		setInterval("alert('Please, use me...')", 30000);
 		function calculate() {
-			var left = parseInt(document.getElementById("leftnum").value, 10);
-			var right = parseInt(document.getElementById("rightnum").value, 10);
+			var left = document.getElementById("leftnum").value;
+			var right = document.getElementById("rightnum").value;
+			var leftnum = parseInt(left, 10);
+			var rightnum = parseInt(right, 10);
 			var sign = document.getElementById("sign").value;
 			var result;
 
-			if (left < 0 || right < 0)
+			if (left.search(/^[0-9]*$/) < 0 || right.search(/^[0-9]*$/) < 0)
+				leftnum = -1;
+			if (leftnum < 0 || rightnum < 0|| left == '' || right == '')
 				return (alert("Error :("));
-			else if (right == 0 && (sign == '/' || sign == '%'))
-				result = "It's over 9000!";
+			else if (rightnum == 0 && (sign == '/' || sign == '%'))
+				result = "\"It's over 9000!\"";
 			else if (sign == "+")
-				result = left + right;
+				result = leftnum + rightnum;
 			else if (sign == '-')
-				result = left - right;
+				result = leftnum - rightnum;
 			else if (sign == '*')
-				result = left * right;
+				result = leftnum * rightnum;
 			else if (sign == '/')
-				result = left / right;
+				result = leftnum / rightnum;
 			else if (sign == '%')
-				result = left % right;
+				result = leftnum % rightnum;
 			console.log(result);
 			alert(result);
 		}

@@ -1,12 +1,14 @@
 <?php
 
 class NightsWatch implements IFighter {
-	public function fight() {
-	}
-
 	public function recruit($name) {
 		if ($name instanceof IFighter)
-			$name->fight();
+			$this->fighters[] = $name;
+	}
+
+	public function fight() {
+		foreach($this->fighters as $name)
+			print ($name->fight());
 	}
 }
 

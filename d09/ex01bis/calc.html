@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<style>
+		div {
+			display: flex;
+			justify-content: center;
+			margin: 30vh auto 0 auto;
+			height: 25px;
+		}
+		.num {
+			min-width: 1.5vw;
+			width: 5vw;
+			text-align: center;
+			margin-left: 0.3vw;
+			margin-right: 0.3vw;
+		}
+		#sign {
+			text-align: center;
+			min-width: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<input class="num" type="text" id="leftnum" value="">
+		<select id="sign">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input class="num" type="text" id="rightnum" value="">
+		<button id="tryme">Try me!</button>
+	</div>
+	<script>
+		$(document).ready(function(){
+			setInterval("alert('Please, use me...')", 30000);
+			$("#tryme").on({
+				click: function() {
+					var isnum = new RegExp(/^[0-9]*$/);
+					var left = $("#leftnum").val();
+					var right = $("#rightnum").val();
+					var sign = $("#sign").val();
+				if (isnum.test(left) && isnum.test(right) && left && right)
+				{
+					left = parseInt(left, 10);
+					right = parseInt(right, 10);
+					var result = eval(left + sign + right);
+					if (right == 0 && (sign == '/' || sign == '%'))
+						result = "\"It's over 9000!\"";
+						console.log(result);
+					alert(result);
+				}	
+				else
+					alert("Error :(");
+			}
+			});
+		});
+	</script>
+</body>
+</html>

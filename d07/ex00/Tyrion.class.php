@@ -1,9 +1,14 @@
 <?php
 
 class Tyrion extends Lannister {
-	public function getSize() {
+
+	public function __construct() {
+		Lannister::__construct();
 		echo "My name is Tyrion" . PHP_EOL;
-		echo "Short";
+	}
+
+	public function getSize() {
+		return "Short";
 	}
 }
 

@@ -72,5 +72,5 @@ $targets = Array("the Hound", "Tyrion", "Podrick");
 foreach ($actual_fighters as $f) {
 	foreach ($targets as $t) {
 		$f->fight($t);
-	}
+	} 
 }

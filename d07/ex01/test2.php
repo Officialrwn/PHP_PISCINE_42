@@ -7,3 +7,4 @@ $euron = new Euron();
 print($euron->familyMotto . PHP_EOL);
 
 ?>
+
